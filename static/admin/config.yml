@@ -25,6 +25,7 @@ collections:
       - label: 'Site Meta'
         name: 'meta'
         file: 'assets/content/meta.json'
+        format: 'json'
         fields:
           - { label: 'Header', name: 'header', widget: 'markdown' }
           - { label: 'Intro', name: 'intro', widget: 'markdown' }
