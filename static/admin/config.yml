@@ -6,19 +6,21 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'assets/content/blog'
+  - name: 'companies'
+    label: 'companies'
+    folder: 'assets/content/companies'
     create: true
     format: 'json'
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Company Name', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Link'
+        name: 'link'
+        widget: 'string'
+        description: 'Link to the offending/SW-exclusive Terms of Service.'
   - name: 'settings'
     label: 'Settings'
     files:
