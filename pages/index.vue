@@ -1,18 +1,13 @@
 <template>
   <div>
-    <logo />
-    <h1 class="title">Nuxt.js & Netlify CMS Starter</h1>
-    <h2 class="subtitle">Truly fantastic. Sometimes I astound even myself.</h2>
-    <a href="https://github.com/xdesro/nuxt-netlify-cms-starter">GitHub</a>
-    <a href="http://i.ncredibly.online">Twitter</a>
-    <nuxt-link to="/blog">Blog</nuxt-link>
-    <div class="deploy-button">
-      <a
-        href="https://app.netlify.com/start/deploy?repository=https://github.com/xdesro/nuxt-netlify-cms-starter"
-      >
-        <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />
-      </a>
-    </div>
+    <h1 class="main-title" v-html="page.header" />
+    <section class="card" v-html="page.intro" />
+    <section class="card" v-for="(section, index) in page.sections" :key="index">
+      <p class="card__header" v-if="section.title">{{ section.title }}</p>
+      <div class="card__content" v-html="$md.render(section.content)" />
+    </section>
+    <!-- {{page}} -->
+    <!-- {{companies}} -->
   </div>
 </template>
 
@@ -20,6 +15,18 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  async asyncData({ params, payload }) {
+    if (payload) return { page: payload }
+    else
+      return {
+        page: await require(`~/assets/content/meta.json`)
+      }
+  },
+  computed: {
+    companies() {
+      return this.$store.state.companies
+    }
+  },
   components: {
     Logo
   },
