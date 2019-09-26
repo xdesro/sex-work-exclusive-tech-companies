@@ -33,5 +33,5 @@ collections:
             name: 'sections'
             widget: 'list'
             fields:
-              - { label: 'Title', name: 'title', widget: 'area' }
+              - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Content', name: 'content', widget: 'markdown' }
