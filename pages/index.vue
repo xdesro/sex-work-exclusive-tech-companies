@@ -6,8 +6,7 @@
       <p class="card__header" v-if="section.title">{{ section.title }}</p>
       <div class="card__content" v-html="$md.render(section.content)" />
     </section>
-    <!-- {{page}} -->
-    <!-- {{companies}} -->
+    {{companies}}
   </div>
 </template>
 
@@ -16,7 +15,7 @@ import Logo from '~/components/Logo.vue'
 
 export default {
   async asyncData({ params, payload }) {
-    if (payload) return { page: payload }
+    if (payload) return { page: payload.meta, companies: payload.companies }
     else
       return {
         page: await require(`~/assets/content/meta.json`)
