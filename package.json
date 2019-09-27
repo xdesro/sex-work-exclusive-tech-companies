@@ -20,8 +20,12 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "eslint": "^6.4.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4"
+    "eslint-plugin-vue": "^5.2.3",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.16.4",
+    "sass-loader": "^8.0.0"
   }
 }

@@ -1,0 +1,17 @@
+.nav {
+  padding: 2rem 0;
+  margin-bottom: 7.5rem;
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    align-items: center;
+    grid-gap: 1.5rem;
+  }
+  &__list-item {
+    display: inline-block;
+    &:before {
+      content: none;
+    }
+  }
+}

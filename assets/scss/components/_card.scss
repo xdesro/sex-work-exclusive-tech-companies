@@ -1,0 +1,16 @@
+.card {
+  @include container-narrow;
+  margin-bottom: 2.5rem;
+
+  &--spaced {
+    margin-bottom: 8rem;
+  }
+  &__header {
+    font-weight: 670;
+    margin-bottom: 1.2rem;
+  }
+  &__content {
+    background-color: $color--contrast;
+    padding: 3.5rem 3.75rem;
+  }
+}

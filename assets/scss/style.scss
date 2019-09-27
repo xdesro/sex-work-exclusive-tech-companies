@@ -1,0 +1,74 @@
+@import './vendor/reset';
+
+@import url('https://rsms.me/inter/inter.css');
+
+$color--contrast: #ffffff;
+$color--background: #f5f5f5;
+$color--light: #e5e5e5;
+$color--mid: #909090;
+$color--neutral: #2b2b2b;
+
+@mixin container-wide {
+  width: 1380px;
+  max-width: 100%;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin container-narrow {
+  width: 960px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+html {
+  background-color: $color--background;
+  color: $color--neutral;
+  font-family: 'Inter var', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  @include container-wide;
+}
+
+p {
+  line-height: 1.3;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: $color--mid;
+  }
+}
+
+ul,
+ol {
+  margin-bottom: 1rem;
+}
+li {
+  &:before {
+    content: '-';
+    display: inline-block;
+  }
+  p {
+    display: inline-block;
+  }
+}
+
+.main-title {
+  font-size: 6rem;
+  font-weight: 300;
+  margin-bottom: 5.5rem;
+  span {
+    color: $color--mid;
+  }
+}
+
+@import './components/navbar';
+@import './components/footer';
+@import './components/card';
+@import './components/list';

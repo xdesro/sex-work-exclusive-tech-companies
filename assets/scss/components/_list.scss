@@ -1,0 +1,42 @@
+.companies-list {
+  @include container-narrow;
+  margin-bottom: 8rem;
+
+  &__header {
+    font-weight: 670;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.search {
+  $this: &;
+  position: relative;
+  margin-bottom: 2.4rem;
+  &__input {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 1.2rem 3.75rem;
+    font-size: 1rem;
+  }
+  &__button {
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 50%;
+    right: 3.75rem;
+    transform: translateY(-50%);
+    display: inline-block;
+    padding: 0;
+    &:hover {
+      #{$this}__icon {
+        color: $color--mid;
+      }
+    }
+  }
+  &__icon {
+    width: 1.2rem;
+    color: $color--neutral;
+    cursor: pointer;
+  }
+}

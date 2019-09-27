@@ -1,0 +1,7 @@
+{
+  "extends": ["plugin:prettier/recommended"],
+  "parserOptions": { "sourceType": "module", "ecmaVersion": 2017 },
+  "rules": {
+    "vue/no-v-html": 0
+  }
+}

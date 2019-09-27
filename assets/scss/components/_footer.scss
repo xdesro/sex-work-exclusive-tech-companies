@@ -1,0 +1,6 @@
+.footer {
+  @include container-narrow;
+  text-align: right;
+  color: $color--mid;
+  margin-bottom: 2.5rem;
+}
