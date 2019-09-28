@@ -35,11 +35,16 @@ export default {
   css: [],
   plugins: [],
   buildModules: [],
-  modules: ['@nuxtjs/markdownit'],
-  markdownit: {
-    injected: true
-  },
   build: {
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'raw-loader'
+          }
+        ]
+      })
+    }
   }
 }

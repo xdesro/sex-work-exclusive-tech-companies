@@ -2,7 +2,7 @@
   <section class="companies-list" id="the-list">
     <div class="companies-list__header">the list</div>
     <Search @input="handleInput" />
-    <ListItem v-for="company in filteredCompanies" v-bind="company" :key="company.slug" />
+    <ListItem v-for="company in companies" v-bind="company" :key="company.id" />
   </section>
 </template>
 
@@ -19,12 +19,12 @@ export default {
   },
   computed: {
     filteredCompanies() {
-      return this.companies.filter(company => {
-        if (this.search.length == 0) {
-          return true
-        }
-        return company.title.toLowerCase().includes(this.search.toLowerCase())
-      })
+      // return this.companies.filter(company => {
+      //   if (this.search.length == 0) {
+      //     return true
+      //   }
+      //   return company.title.toLowerCase().includes(this.search.toLowerCase())
+      // })
     }
   },
   props: ['companies'],

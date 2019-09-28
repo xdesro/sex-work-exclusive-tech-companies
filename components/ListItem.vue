@@ -1,6 +1,5 @@
 <template>
   <div class="company">
-    <!-- {{company}} -->
     <header class="company__header">
       <p class="company__title">{{ title }}</p>
       <button
@@ -9,7 +8,7 @@
       >{{ this.isActive ? 'close' : 'details' }}</button>
     </header>
     <div class="company__content" v-if="isActive">
-      <div class="company__description" v-html="$md.render(body)" />
+      <div class="company__description" v-html="content" />
       <a class="company__link" :href="link">read more</a>
     </div>
   </div>
@@ -18,15 +17,18 @@
 <script>
 export default {
   props: {
+    content: String,
+    id: String,
     title: String,
-    body: String,
-    link: String,
-    id: String
+    link: String
   },
   computed: {
     isActive() {
       return this.id === this.$store.state.activeCompany
     }
+  },
+  mounted() {
+    console.log(this)
   },
   methods: {
     toggleActive() {

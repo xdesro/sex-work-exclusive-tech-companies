@@ -14,7 +14,7 @@
       class="card card--spaced"
     >
       <p v-if="section.title" class="card__header">{{ section.title }}</p>
-      <div class="card__content" v-html="$md.render(section.content)" />
+      <div class="card__content" v-html="section.content" />
     </section>
     <!-- {{ companies }} -->
   </div>
@@ -22,7 +22,8 @@
 
 <script>
 import _ from 'lodash'
-
+import Markdownit from 'markdown-it'
+const md = new Markdownit()
 import List from '~/components/List'
 
 export default {
@@ -38,6 +39,12 @@ export default {
     companies() {
       return this.$store.state.companies
     }
+  },
+  mounted() {
+    this.page.sections.map(section => {
+      section.content = md.render(section.content)
+      return section
+    })
   },
   filters: {
     toSlug: str => {

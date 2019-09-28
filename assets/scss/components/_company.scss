@@ -1,6 +1,7 @@
 .company {
   background-color: $color--contrast;
   padding: 1.2rem 3.75rem;
+  margin-bottom: 1.2rem;
   &__header {
     display: grid;
     grid-template-columns: auto auto;
