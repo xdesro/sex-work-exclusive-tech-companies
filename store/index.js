@@ -1,10 +1,16 @@
+import _ from 'lodash'
+
 export const state = () => ({
-  companies: []
+  companies: [],
+  activeCompany: null
 })
 
 export const mutations = {
   setCompanies(state, list) {
     state.companies = list
+  },
+  setActiveCompany(state, index) {
+    state.activeCompany = index
   }
 }
 
@@ -18,8 +24,12 @@ export const actions = {
     let companies = files.keys().map(key => {
       let res = files(key)
       res.slug = key.slice(2, -5)
+      res.id = _.uniqueId()
       return res
     })
     await commit('setCompanies', companies)
+  },
+  activateCompany({ commit }, index) {
+    commit('setActiveCompany', index)
   }
 }

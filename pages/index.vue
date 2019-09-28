@@ -21,11 +21,24 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 import List from '~/components/List'
+
 export default {
+  async asyncData({ params, payload }) {
+    if (payload) return { page: payload.meta, companies: payload.companies }
+    else
+      return {
+        page: await require(`~/assets/content/meta.json`)
+      }
+  },
   components: { List },
   computed: {
     companies() {
+      // return [...this.$store.state.companies].forEach(
+      //   company => (company.id = _.uniqueId())
+      // )
       return this.$store.state.companies
     }
   },
@@ -34,12 +47,8 @@ export default {
       return val.toLowerCase().replace(/\s+/g, '-')
     }
   },
-  async asyncData({ params, payload }) {
-    if (payload) return { page: payload.meta, companies: payload.companies }
-    else
-      return {
-        page: await require(`~/assets/content/meta.json`)
-      }
+  mounted() {
+    console.log(this.$store.state.companies)
   },
   head() {
     return {

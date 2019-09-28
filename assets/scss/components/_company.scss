@@ -1,0 +1,38 @@
+.company {
+  background-color: $color--contrast;
+  padding: 1.2rem 3.75rem;
+  &__header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+  }
+  &__title {
+    font-weight: 670;
+  }
+  &__toggle {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    text-decoration: underline;
+    font-weight: 300;
+    cursor: pointer;
+    // height: 1rem;
+  }
+  &__description {
+    font-size: 0.8rem;
+    p {
+      margin-block-end: 1rem;
+    }
+    blockquote {
+      color: $color--mid;
+      padding-left: 1.6rem;
+      border-left: 0.4rem solid $color--mid;
+    }
+  }
+  &__link {
+    font-size: 0.8rem;
+    text-align: right;
+    display: block;
+  }
+}

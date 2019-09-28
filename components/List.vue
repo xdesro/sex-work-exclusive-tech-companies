@@ -2,7 +2,12 @@
   <section class="companies-list" id="the-list">
     <div class="companies-list__header">the list</div>
     <Search />
-    <ListItem v-for="company in companies" v-bind="company" :key="company.slug" />
+    <ListItem
+      v-for="company in companies"
+      v-bind="company"
+      :key="company.slug"
+      @toggle-active="toggleActive"
+    />
   </section>
 </template>
 
@@ -20,6 +25,11 @@ export default {
   components: {
     Search,
     ListItem
+  },
+  methods: {
+    toggleActive() {
+      console.log('test')
+    }
   }
 }
 </script>
