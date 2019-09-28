@@ -12,5 +12,11 @@
   &__content {
     background-color: $color--contrast;
     padding: 3.5rem 3.75rem;
+    p {
+      margin-block-end: 1rem;
+    }
+    li p {
+      margin-block-end: 0;
+    }
   }
 }

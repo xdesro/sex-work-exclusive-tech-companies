@@ -5,7 +5,9 @@
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
-    margin-bottom: 0.9rem;
+    &:not(:last-child) {
+      margin-bottom: 0.9rem;
+    }
   }
   &__title {
     font-weight: 670;

@@ -36,19 +36,13 @@ export default {
   components: { List },
   computed: {
     companies() {
-      // return [...this.$store.state.companies].forEach(
-      //   company => (company.id = _.uniqueId())
-      // )
       return this.$store.state.companies
     }
   },
   filters: {
-    toSlug: val => {
-      return val.toLowerCase().replace(/\s+/g, '-')
+    toSlug: str => {
+      return str.toLowerCase().replace(/\s+/g, '-')
     }
-  },
-  mounted() {
-    console.log(this.$store.state.companies)
   },
   head() {
     return {

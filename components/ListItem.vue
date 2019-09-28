@@ -2,7 +2,7 @@
   <div class="company">
     <!-- {{company}} -->
     <header class="company__header">
-      <p class="company__title">{{title}}</p>
+      <p class="company__title">{{ title }}</p>
       <button
         class="company__toggle"
         @click="toggleActive"
@@ -27,9 +27,6 @@ export default {
     isActive() {
       return this.id === this.$store.state.activeCompany
     }
-  },
-  mounted() {
-    console.log(this.$store.state.activeCompany === this.id)
   },
   methods: {
     toggleActive() {

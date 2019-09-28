@@ -19,24 +19,13 @@
     padding: 1.2rem 3.75rem;
     font-size: 1rem;
   }
-  &__button {
-    background-color: transparent;
-    border: 0;
+  &__icon {
     position: absolute;
     top: 50%;
     right: 3.75rem;
     transform: translateY(-50%);
     display: inline-block;
-    padding: 0;
-    &:hover {
-      #{$this}__icon {
-        color: $color--mid;
-      }
-    }
-  }
-  &__icon {
     width: 1.2rem;
     color: $color--neutral;
-    cursor: pointer;
   }
 }

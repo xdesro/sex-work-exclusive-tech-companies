@@ -1,13 +1,8 @@
 <template>
   <section class="companies-list" id="the-list">
     <div class="companies-list__header">the list</div>
-    <Search />
-    <ListItem
-      v-for="company in companies"
-      v-bind="company"
-      :key="company.slug"
-      @toggle-active="toggleActive"
-    />
+    <Search @input="handleInput" />
+    <ListItem v-for="company in filteredCompanies" v-bind="company" :key="company.slug" />
   </section>
 </template>
 
@@ -18,7 +13,18 @@ import ListItem from './ListItem'
 export default {
   data() {
     return {
-      activeId: null
+      activeId: null,
+      search: ''
+    }
+  },
+  computed: {
+    filteredCompanies() {
+      return this.companies.filter(company => {
+        if (this.search.length == 0) {
+          return true
+        }
+        return company.title.toLowerCase().includes(this.search.toLowerCase())
+      })
     }
   },
   props: ['companies'],
@@ -27,8 +33,8 @@ export default {
     ListItem
   },
   methods: {
-    toggleActive() {
-      console.log('test')
+    handleInput(input) {
+      this.search = input
     }
   }
 }
