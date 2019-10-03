@@ -8,13 +8,16 @@
       >{{ this.isActive ? 'close' : 'details' }}</button>
     </header>
     <div class="company__content" v-if="isActive">
-      <div class="company__description" v-html="content" />
+      <div class="company__description" v-html="parsedContent" />
       <a class="company__link" :href="link">read more</a>
     </div>
   </div>
 </template>
 
 <script>
+import Markdownit from 'markdown-it'
+const md = new Markdownit()
+
 export default {
   props: {
     content: String,
@@ -25,10 +28,10 @@ export default {
   computed: {
     isActive() {
       return this.id === this.$store.state.activeCompany
+    },
+    parsedContent() {
+      return md.render(this.content)
     }
-  },
-  mounted() {
-    console.log(this)
   },
   methods: {
     toggleActive() {
