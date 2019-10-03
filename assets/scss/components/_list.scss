@@ -1,10 +1,35 @@
 .companies-list {
   @include container-narrow;
   margin-bottom: 8rem;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 3.75rem;
+    z-index: -1;
+    border-left: 1px solid $color--light;
+    height: calc(100% + 10rem);
+  }
 
   &__header {
     font-weight: 670;
     margin-bottom: 1.2rem;
+  }
+
+  &__alpha {
+    position: relative;
+  }
+
+  &__alpha-header {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: right;
+    color: $color--light;
   }
 }
 

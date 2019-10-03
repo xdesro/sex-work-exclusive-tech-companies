@@ -1,5 +1,5 @@
 <template>
-  <div class="company">
+  <div :class="this.isActive ? 'company company--active' : 'company'">
     <header class="company__header">
       <p class="company__title">{{ title }}</p>
       <button

@@ -1,7 +1,12 @@
 .card {
+  $this: &;
+
   @include container-narrow;
   margin-bottom: 2.5rem;
 
+  &--disabled {
+    color: $color--mid;
+  }
   &--spaced {
     margin-bottom: 8rem;
   }
@@ -12,6 +17,9 @@
   &__content {
     background-color: $color--contrast;
     padding: 3.5rem 3.75rem;
+    #{$this}--compact & {
+      padding: 1.2rem 3.75rem;
+    }
     p {
       margin-block-end: 1rem;
     }

@@ -10,6 +10,12 @@
       <span class="companies-list__alpha-header">{{letter}}</span>
       <ListItem v-for="company in filteredCompanies[letter]" v-bind="company" :key="company.id" />
     </div>
+    <div
+      v-if="Object.keys(filteredCompanies).length === 0"
+      class="card card--compact card--disabled"
+    >
+      <p class="card__content">No results found.</p>
+    </div>
   </section>
 </template>
 
@@ -40,7 +46,6 @@ export default {
 
       Object.keys(this.sortedCompanies).forEach((letter, index) => {
         const letterIsActive = this.sortedCompanies[letter].some(company => {
-          console.log(company.title.toLowerCase().includes(this.search))
           return company.title.toLowerCase().includes(this.search)
         })
         if (letterIsActive) {
@@ -64,8 +69,6 @@ export default {
   methods: {
     handleInput(input) {
       this.search = input.toLowerCase()
-
-      console.log(this.filteredCompanies)
     }
   }
 }
