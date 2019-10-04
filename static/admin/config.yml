@@ -16,7 +16,6 @@ collections:
     label: 'Companies'
     folder: 'assets/content/companies'
     create: true
-    format: 'md'
     slug: '{{slug}}'
     editor:
       preview: false
