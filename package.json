@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-netlify-cms-starter",
+  "name": "sex-work-exclusive-tech-companies",
   "version": "1.0.0",
-  "description": "A very Spartan boilerplate for using Netlify CMS/static content files with Nuxt.js.",
+  "description": "A growing list of tech companies with Terms of Service that discriminate against sex workers.",
   "author": "Henry Desroches <yo@henry.codes> (https://henry.codes)",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xdesro/nuxt-netlify-cms-starter#readme"
+    "url": "https://github.com/xdesro/sex-work-exclusive-tech-companies#readme"
   },
   "license": "MIT",
   "dependencies": {
