@@ -1,14 +1,15 @@
 export default {
   mode: 'universal',
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Tech Companies That Discriminate Against Sex Workers',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          'As comprehensive as possible a list of tech companies that have sex-work-exclusive polices in their Terms of Service.'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]

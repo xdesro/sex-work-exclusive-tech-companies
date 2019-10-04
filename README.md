@@ -1,70 +1,54 @@
-# 🏞 Nuxt & Netlify CMS Starter
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](code-of-conduct.md)
 
-A lot of the starter repos for **Nuxt x Netlify CMS** use a module like `nuxtent` or `nuxtdown` to manage flat file content. This project is meant to be a solution for those who don't mind doing a little more configuration to not have to rely on these dependencies.
+# A List Of Sex Work-Exclusive Tech Companies
+
+In the era of SESTA/FOSTA and other myriad attacks on the rights of sex workers, it’s as important as ever to defend their rights, safety, and the normalization of their careers. This project is an uncomplete list of prominent tech companies (often those lauded as “woke”, etc) that have discriminatory clauses in their TOS or have otherwise excluded sex workers. This is an open-source and growing list, and you can contribute to its development and maintenance on GitHub.
 
 ## 🎉 Getting Started
 
-The quickest way to get started is with Netlify's hyper-convenient **one-click Deploy To Netlify**, which will automatically create an instance of this project on your GitHub account and deploy it instantly to Netlify.
+You can follow these steps to get started!
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/xdesro/nuxt-netlify-cms-starter)
-
-Otherwise, you can follow these steps!
-
-1. 👯‍♂️ Clone the repository locally and cd into the directory.
+1. 👯‍ Clone the repository locally and cd into the directory.
 
 ```bash
-git clone https://github.com/xdesro/nuxt-netlify-cms-starter
+git clone git@github.com:xdesro/sex-work-exclusive-tech-companies.git
 
-cd nuxt-netlify-cms-starter
+cd sex-work-exclusive-tech-companies
 ```
 
 2. 📦 Install dependencies.
 
 ```bash
-yarn install
+npm install
 ```
 
 3. 🏗 Run the project for local dev. This will start a hot-reloading server at `localhost:3000`.
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 4. 🌌 Build the app for server-side rendered deployment. See more about **Universal SSR** in the [Nuxt.js docs](https://nuxtjs.org/guide#server-rendered-universal-ssr-).
 
 ```bash
-yarn build
+npm run build
 
 # And to serve that deployment...
-yarn start
+npm run start
 ```
 
 5. ⚡️ Generate a fully pre-rendered static site. See more [in the docs](https://nuxtjs.org/guide#static-generated-pre-rendering-).
 
 ```bash
-yarn generate
+npm run generate
 ```
 
 > This project was bootstrapped with `create-nuxt-app`. There are more detailed explanations of how everything works in the [Nuxt.js docs](https://nuxtjs.org).
 
-## 🖋 Activating Netlify CMS
+## 📄 Contributing
 
-This project comes with Netlify CMS ready to rumble, and a basic blog configuration. To use Netlify CMS:
+I would love, love, love your help with this project — if you have improvements you'd like to make to the code or a company you'd like to add to this list, or anything else under the sun! I appreciate you. Check out the [`CONTRIBUTING.md`](/CONTRIBUTING.md).
 
-### 🔏 Authenticating with Netlify Identity
-
-1. Deploy to Netlify at least once.
-2. Go to **Settings > Identity**, and select **Enable Identity service**.
-3. Once enabled, select **Settings and usage**, and scroll down to **Registration preferences**. You can set this to either **Open** or **Invite only**, but usually **Invite only** is your best bet for a personal site.
-4. If you don't want to create an account, or would like to use an external provider such as GitHub or Google, you can enable those services under **External providers**.
-5. Scroll down to **Services** and click **Enable Git Gateway**.
-
-### 🔐 Local Setup
-
-1. In your browser, navigate to `localhost:3000/admin`.
-2. Enter the Netlify URL of your site when prompted.
-3. Login with the account you created or one of the external providers, if you enabled them.
-
-## 💁‍♀️ Questions? Concerns?
+## 💁‍ Questions? Concerns?
 
 Feel free to reach out [on Twitter](https://twitter.com/xdesro). Friendly feedback and advice is always welcome. Contributions doubly so.

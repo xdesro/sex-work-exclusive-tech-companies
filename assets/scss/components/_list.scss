@@ -30,6 +30,11 @@
     font-weight: 300;
     text-align: right;
     color: $color--light;
+    display: none;
+
+    @media screen and (min-width: 68rem) {
+      display: block;
+    }
   }
 }
 
