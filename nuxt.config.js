@@ -25,7 +25,12 @@ export default {
             companies: fs
               .readdirSync('./assets/content/companies')
               .map(file => {
-                return require(`./assets/content/companies/${file}`)
+                const readFile = fs.readFileSync(
+                  `./assets/content/companies/${file}`,
+                  'utf-8'
+                )
+                // return require(`./assets/content/companies/${file}`)
+                return readFile
               })
           }
         }

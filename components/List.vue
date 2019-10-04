@@ -21,6 +21,7 @@
 
 <script>
 import _ from 'lodash'
+import * as matter from 'gray-matter'
 
 import Search from './Search'
 import ListItem from './ListItem'
@@ -34,16 +35,36 @@ export default {
   },
   computed: {
     sortedCompanies() {
-      return _(this.companies)
-        .groupBy(co => co.title[0].toUpperCase())
-        .value()
+      const formatted = [...this.companies].map(company => {
+        return {
+          content: company.content,
+          title: company.data.title,
+          id: _.uniqueId(),
+          link: company.data.link
+        }
+      })
+      const grouped = _.groupBy(formatted, company =>
+        company.title[0].toUpperCase()
+      )
+      return grouped
+      // return this.companies
+
+      // const grouped = _.groupBy(
+      //     )
+      // return
+
+      // return _.groupBy(this.companies, company => {
+      //   company.title[0].toUpperCase()
+      // })
+      // return _(this.companies)
+      //   .groupBy()
+      //   .value()
     },
     filteredCompanies() {
       if (this.search.length === 0) {
         return this.sortedCompanies
       }
       const companies = {}
-
       Object.keys(this.sortedCompanies).forEach((letter, index) => {
         const letterIsActive = this.sortedCompanies[letter].some(company => {
           return company.title.toLowerCase().includes(this.search)

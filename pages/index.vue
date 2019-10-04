@@ -22,13 +22,19 @@
 
 <script>
 import _ from 'lodash'
+import * as matter from 'gray-matter'
+
 import Markdownit from 'markdown-it'
 const md = new Markdownit()
 import List from '~/components/List'
 
 export default {
   async asyncData({ params, payload }) {
-    if (payload) return { page: payload.meta, companies: payload.companies }
+    if (payload)
+      return {
+        page: payload.meta,
+        companies: payload.companies.map(company => matter(company))
+      }
     else
       return {
         page: await require(`~/assets/content/meta.json`)
@@ -37,13 +43,15 @@ export default {
   components: { List },
   computed: {
     companies() {
-      return this.$store.state.companies
+      const frontMattered = [...this.$store.state.companies].map(company =>
+        matter(company)
+      )
+      return frontMattered
     }
   },
   mounted() {
-    this.page.sections.map(section => {
+    this.page.sections.forEach(section => {
       section.content = md.render(section.content)
-      return section
     })
   },
   filters: {
