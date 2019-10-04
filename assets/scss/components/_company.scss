@@ -2,8 +2,17 @@
   $this: &;
 
   background-color: $color--contrast;
-  padding: 1.2rem 3.75rem;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 1.2rem 2rem;
   margin-bottom: 1.2rem;
+
+  @include screen(sm) {
+    width: 100%;
+    padding: 1.2rem 3.75rem;
+  }
+
   &__header {
     display: grid;
     grid-template-columns: auto auto;

@@ -1,21 +1,31 @@
 .companies-list {
   @include container-narrow;
-  margin-bottom: 8rem;
   position: relative;
+  margin-bottom: 4rem;
+  @include screen(sm) {
+    margin-bottom: 8rem;
+  }
 
   &:before {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 3.75rem;
+    left: 0rem;
     z-index: -1;
     border-left: 1px solid $color--light;
     height: calc(100% + 10rem);
+    @include screen(sm) {
+      left: 3.75rem;
+    }
   }
 
   &__header {
     font-weight: 670;
     margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+    @include screen(sm) {
+      font-size: 1rem;
+    }
   }
 
   &__alpha {
@@ -43,19 +53,29 @@
   position: relative;
   margin-bottom: 2.4rem;
   &__input {
+    box-sizing: border-box;
     outline: none;
     border: none;
-    width: 100%;
-    padding: 1.2rem 3.75rem;
+    padding: 1.2rem 2rem;
     font-size: 1rem;
+
+    @include screen(sm) {
+      width: 100%;
+      margin-left: 0;
+      transform: unset;
+      padding: 1.2rem 3.75rem;
+    }
   }
   &__icon {
     position: absolute;
     top: 50%;
-    right: 3.75rem;
+    right: 1rem;
     transform: translateY(-50%);
     display: inline-block;
     width: 1.2rem;
     color: $color--neutral;
+    @include screen(sm) {
+      right: 3.75rem;
+    }
   }
 }
