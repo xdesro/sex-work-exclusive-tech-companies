@@ -7,6 +7,7 @@
   margin-bottom: 2.5rem;
   @include screen(sm) {
     @include container-narrow;
+    margin-bottom: 2.5rem;
     transform: unset;
   }
 
@@ -22,7 +23,7 @@
   &__header {
     font-weight: 670;
     margin-bottom: 1.2rem;
-    padding-left: 2rem;
+    margin-left: 2rem;
     font-size: 1.6rem;
     @include screen(sm) {
       margin-left: 0;
