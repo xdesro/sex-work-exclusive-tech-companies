@@ -1,24 +1,46 @@
 .card {
   $this: &;
 
-  @include container-narrow;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
   margin-bottom: 2.5rem;
+  @include screen(sm) {
+    @include container-narrow;
+    transform: unset;
+  }
 
   &--disabled {
     color: $color--mid;
   }
   &--spaced {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
+    @include screen(sm) {
+      margin-bottom: 8rem;
+    }
   }
   &__header {
     font-weight: 670;
     margin-bottom: 1.2rem;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+    @include screen(sm) {
+      margin-left: 0;
+      font-size: 1rem;
+    }
   }
   &__content {
     background-color: $color--contrast;
-    padding: 3.5rem 3.75rem;
+    padding: 2rem;
+    @include screen(sm) {
+      padding: 3.5rem 3.75rem;
+    }
     #{$this}--compact & {
-      padding: 1.2rem 3.75rem;
+      padding: 1.2rem 2rem;
+
+      @include screen(sm) {
+        padding: 1.2rem 3.75rem;
+      }
     }
     p {
       margin-block-end: 1rem;

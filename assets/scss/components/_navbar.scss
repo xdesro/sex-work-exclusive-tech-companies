@@ -1,17 +1,48 @@
 .nav {
   padding: 2rem 0;
-  margin-bottom: 7.5rem;
+  @include screen(sm) {
+    margin-bottom: 7.5rem;
+  }
   &__list {
     display: grid;
-    grid-auto-flow: column;
-    justify-content: end;
-    align-items: center;
-    grid-gap: 1.5rem;
+    position: relative;
+    @include screen(sm) {
+      grid-gap: 1.5rem;
+      justify-content: end;
+      grid-auto-flow: column;
+      align-items: center;
+    }
   }
   &__list-item {
     display: inline-block;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 670;
+    @include screen(sm) {
+      text-transform: none;
+      font-weight: normal;
+    }
     &:before {
       content: none;
+    }
+    &:last-of-type {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include screen(sm) {
+        position: static;
+        top: unset;
+        right: unset;
+      }
+    }
+  }
+  &__list-link {
+    padding: 0.5rem 0;
+    display: block;
+    @include screen(sm) {
+      max-width: auto;
+      display: inline;
+      padding: 0;
     }
   }
 }
