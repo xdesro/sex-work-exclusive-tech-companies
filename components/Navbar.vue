@@ -12,7 +12,10 @@
           <a href="#what-to-do-about-it" class="nav__list-link">what to do about it</a>
         </li>
         <li class="nav__list-item">
-          <a href="#" class="nav__list-link">
+          <a
+            href="https://github.com/xdesro/sex-work-exclusive-tech-companies"
+            class="nav__list-link"
+          >
             <Icon name="github" />
           </a>
         </li>

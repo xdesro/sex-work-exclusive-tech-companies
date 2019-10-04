@@ -2,7 +2,11 @@
 
 # A List Of Sex Work-Exclusive Tech Companies
 
-In the era of SESTA/FOSTA and other myriad attacks on the rights of sex workers, it’s as important as ever to defend their rights, safety, and the normalization of their careers. This project is an uncomplete list of prominent tech companies (often those lauded as “woke”, etc) that have discriminatory clauses in their TOS or have otherwise excluded sex workers. This is an open-source and growing list, and you can contribute to its development and maintenance on GitHub.
+In the era of SESTA/FOSTA and other myriad attacks on the rights of sex workers, it’s as important as ever to defend their rights, safety, and the normalization of their careers. This project is an uncomplete list of prominent tech companies (often those lauded as “woke”, etc) that have discriminatory clauses in their TOS or have otherwise excluded sex workers. This is an open-source and growing list, and you can contribute to its development and maintenance [on GitHub](https://github.com/xdesro/sex-work-exclusive-tech-companies/).
+
+### ⚡️ Goals For The Future
+
+Eventually, I'd love for this project to be more useful — for example, it would be great if people visiting the site could see a company they patronize, and click to immediately cancel their usership with that company. It'd also be rad if you could click a button to send a form email to someone at the company, asking them to change their TOS.
 
 ## 🎉 Getting Started
 

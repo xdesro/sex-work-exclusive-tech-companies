@@ -34,8 +34,10 @@
 
   &__alpha-header {
     position: absolute;
-    left: -2rem;
+    left: -3rem;
     top: 0;
+    display: block;
+    width: 2rem;
     font-size: 1.6rem;
     font-weight: 300;
     text-align: right;
