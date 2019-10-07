@@ -1,0 +1,17 @@
+.rotator {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  margin-top: -50%;
+  color: $color--light;
+  z-index: -2;
+  width: 100vw;
+  left: 50vw;
+  transform: rotate(var(--rotatorDeg));
+  font-weight: 200;
+  font-size: 1rem;
+  text-transform: uppercase;
+  &--left {
+    left: -50vw;
+  }
+}
