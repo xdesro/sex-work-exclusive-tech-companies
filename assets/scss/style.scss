@@ -9,7 +9,8 @@ $color--mid: #909090;
 $color--neutral: #2b2b2b;
 
 $breakpoints: (
-  sm: 34rem
+  sm: 34rem,
+  lg: 90rem
 );
 
 @mixin screen($breakpoint) {

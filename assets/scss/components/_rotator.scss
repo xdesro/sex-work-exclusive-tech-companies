@@ -11,6 +11,11 @@
   font-weight: 200;
   font-size: 1rem;
   text-transform: uppercase;
+
+  display: none;
+  @include screen(lg) {
+    display: block;
+  }
   &--left {
     left: -50vw;
   }
