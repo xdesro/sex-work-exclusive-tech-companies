@@ -8,7 +8,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "lint": "eslint '**/*.{js,vue}'"
   },
   "repository": {
     "type": "git",
@@ -24,13 +25,21 @@
   },
   "devDependencies": {
     "eslint": "^6.4.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.2.3",
     "html-loader": "^0.5.5",
     "markdown-loader": "^5.1.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.16.4",
     "sass-loader": "^8.0.0"
+  },
+  "headMeta": {
+    "title": "Tech Companies That Discriminate Against Sex Workers",
+    "description": "As comprehensive as possible a list of tech companies that have sex-work-exclusive polices in their Terms of Service.",
+    "siteUrl": "https://sex-work-exclusive-companies.tech/",
+    "imageUrl": "https://sex-work-exclusive-companies.tech/open-graph.jpg",
+    "themeColor": "#E5E5E5",
+    "twitter": "@xdesro"
   }
 }

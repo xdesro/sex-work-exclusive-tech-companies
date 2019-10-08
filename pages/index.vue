@@ -3,20 +3,19 @@
     <h1 class="main-title" v-html="page.header" />
     <section class="card">
       <div class="card__content">
-        <p v-html="page.intro" />
+        <p v-html="md.render(page.intro)" />
       </div>
     </section>
     <List :companies="companies" />
     <section
       v-for="(section, index) in page.sections"
-      :key="index"
       :id="section.title | toSlug"
+      :key="index"
       class="card card--spaced"
     >
       <p v-if="section.title" class="card__header">{{ section.title }}</p>
       <div class="card__content" v-html="section.content" />
     </section>
-    <!-- {{ companies }} -->
   </div>
 </template>
 

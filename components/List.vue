@@ -4,10 +4,10 @@
     <Search @input="handleInput" />
     <div
       class="companies-list__alpha"
-      v-for="(letter,index) in Object.keys(filteredCompanies)"
+      v-for="(letter, index) in Object.keys(filteredCompanies)"
       :key="index"
     >
-      <span class="companies-list__alpha-header">{{letter}}</span>
+      <span class="companies-list__alpha-header">{{ letter }}</span>
       <ListItem v-for="company in filteredCompanies[letter]" v-bind="company" :key="company.id" />
     </div>
     <div
@@ -47,18 +47,6 @@ export default {
         company.title[0].toUpperCase()
       )
       return grouped
-      // return this.companies
-
-      // const grouped = _.groupBy(
-      //     )
-      // return
-
-      // return _.groupBy(this.companies, company => {
-      //   company.title[0].toUpperCase()
-      // })
-      // return _(this.companies)
-      //   .groupBy()
-      //   .value()
     },
     filteredCompanies() {
       if (this.search.length === 0) {
