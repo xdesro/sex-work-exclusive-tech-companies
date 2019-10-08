@@ -3,7 +3,7 @@
     <h1 class="main-title" v-html="page.header" />
     <section class="card">
       <div class="card__content">
-        <p v-html="md.render(page.intro)" />
+        <p v-html="page.intro" />
       </div>
     </section>
     <List :companies="companies" />
@@ -52,6 +52,7 @@ export default {
     this.page.sections.forEach(section => {
       section.content = md.render(section.content)
     })
+    this.page.intro = md.render(this.page.intro)
   },
   filters: {
     toSlug: str => {
