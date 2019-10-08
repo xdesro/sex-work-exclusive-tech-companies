@@ -31,7 +31,7 @@ export default {
       },
       { name: 'twitter:site', content: pkg.headMeta.twitter },
       { name: 'twitter:creator', content: pkg.headMeta.twitter },
-      { name: 'twitter:image:src', content: pkg.headMeta.imageUrl },
+      { name: 'twitter:image', content: pkg.headMeta.imageUrl },
       { hid: 'og:title', name: 'og:title', content: pkg.headMeta.title },
       {
         hid: 'og:description',
