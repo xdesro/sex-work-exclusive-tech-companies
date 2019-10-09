@@ -58,13 +58,6 @@ export default {
     toSlug: str => {
       return str.toLowerCase().replace(/\s+/g, '-')
     }
-  },
-  head() {
-    return {
-      script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
-      ]
-    }
   }
 }
 </script>

@@ -4,6 +4,7 @@
       <p class="company__title">{{ title }}</p>
       <button
         class="company__toggle"
+        type="button"
         @click="toggleActive"
       >{{ this.isActive ? 'close' : 'details' }}</button>
     </header>
