@@ -3,6 +3,9 @@ import pkg from './package'
 export default {
   mode: 'universal',
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: 'Tech Companies That Discriminate Against Sex Workers',
     meta: [
       { charset: 'utf-8' },

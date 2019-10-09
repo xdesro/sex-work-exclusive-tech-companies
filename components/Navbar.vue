@@ -15,6 +15,7 @@
           <a
             href="https://github.com/xdesro/sex-work-exclusive-tech-companies"
             class="nav__list-link"
+            aria-label="Visit the GitHub repo for this project"
           >
             <Icon name="github" />
           </a>
