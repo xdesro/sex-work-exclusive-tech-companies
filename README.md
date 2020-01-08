@@ -56,3 +56,13 @@ I would love, love, love your help with this project — if you have improvement
 ## 💁‍ Questions? Concerns?
 
 Feel free to reach out [on Twitter](https://twitter.com/xdesro). Friendly feedback and advice is always welcome. Contributions doubly so.
+
+## 🗣Attribution
+
+This list has been greatly enhanced by the amazing work of Liara Roux and Ashley Lake on **[liaraslist](https://liaraslist.org)**. If you're able to/interested in contributing to this project, it'd be really tremendous if you could also contribute additions/suggestions to [their project](https://docs.google.com/document/d/1c1nqawo1QuiVlpA3bhS8xyDxzDDlRq6BoogAoc91OmU/edit#heading=h.encz0u5b6uom) as well.
+
+The creation of this list is heavily-inspired by:
+
+- [Tatiana Mac](https://tatianamac.com/)'s "**[Self-Defined](https://github.com/tatianamac/selfdefined)**" project
+- [Omayeli Arenyeka](https://www.omayeli.com)'s "**[The Gendered Project](https://github.com/gendered/gendered)**"
+- [Andy Bell](https://hankchizljaw.com)'s "**[Companies That Work With ICE](https://github.com/hankchizljaw/companies-that-work-with-ice)**" project.
