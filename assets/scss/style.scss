@@ -105,6 +105,27 @@ em {
   }
 }
 
+.company__description {
+  margin-top: 0.9em;
+}
+
+#detailsButton {
+  display: none;
+}
+
+.jsFallback {
+  margin-bottom: 0 !important;
+}
+
+.jsFallback button {
+  display: inline-block !important;
+}
+
+.jsFallback div,
+.jsFallback a {
+  display: none !important;
+}
+
 @import './components/navbar';
 @import './components/footer';
 @import './components/card';
