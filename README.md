@@ -12,6 +12,13 @@ Eventually, I'd love for this project to be more useful — for example, it woul
 
 You can follow these steps to get started!
 
+### Prerequisites
+
+- Node `v16.18.0`
+- NPM `v8.19.2`
+
+### Install and Run
+
 1. 👯‍ Clone the repository locally and cd into the directory.
 
 ```bash
