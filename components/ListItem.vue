@@ -1,5 +1,8 @@
 <template>
-  <div :class="this.isActive ? 'company company--active' : 'company'">
+  <div
+    :class="this.isActive ? 'company company--active' : 'company'"
+    :id="title | slugify"
+  >
     <header class="company__header" v-bind:class="{ jsFallback: jsEnabled }">
       <p class="company__title">{{ title }}</p>
       <button
@@ -8,7 +11,9 @@
         v-bind:class="{ jsFallback: jsEnabled }"
         type="button"
         @click="toggleActive"
-      >{{ this.isActive ? 'close' : 'details' }}</button>
+      >
+        {{ this.isActive ? 'close' : 'details' }}
+      </button>
     </header>
     <div class="company__content" v-if="isActive">
       <div class="company__description" v-html="parsedContent" />
@@ -33,10 +38,10 @@ export default {
     link: String
   },
   data: function() {
-      return {
-        jsEnabled: false
-      }
-    },
+    return {
+      jsEnabled: false
+    }
+  },
   computed: {
     isActive() {
       return this.id === this.$store.state.activeCompany
@@ -44,6 +49,19 @@ export default {
     parsedContent() {
       return md.render(this.content)
     }
+  },
+  filters: {
+    slugify: text =>
+      text
+        .toString()
+        .toLowerCase()
+        .trim()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/&/g, '-and-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-')
   },
   methods: {
     toggleActive() {
